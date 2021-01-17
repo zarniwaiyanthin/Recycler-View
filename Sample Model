@@ -1,0 +1,6 @@
+class Movie(
+    val title:String, // Replace with same structure of the data
+    val year:Int,
+    val image:Int
+) {
+}
