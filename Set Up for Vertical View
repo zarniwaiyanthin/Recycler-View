@@ -1,0 +1,3 @@
+rvVertical.adapter=trendingAdapter() // show vertical view
+rvVertical.layoutManager=LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false) // manage layout
+trendingAdapter.setNewData('Data') // set data
