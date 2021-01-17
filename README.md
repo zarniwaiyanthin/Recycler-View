@@ -18,3 +18,4 @@ Creating an adapter:
 4. Add setNewData function
 
 Adapter is the bridge between the data source and the recycler view
+All code in adapter is typical and just change 'item_grid' to desired item name
