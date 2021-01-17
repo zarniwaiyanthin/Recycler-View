@@ -1,0 +1,3 @@
+rvHorizontal.adapter=movieAdapter() // show recycler view
+rvHorizontal.layoutManager=LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false) // manage layout
+movieAdapter.setData('Data') // set data to recycler view
