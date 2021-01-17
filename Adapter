@@ -1,0 +1,28 @@
+class OnlyForYouAdapter:RecyclerView.Adapter<OnlyForYouAdapter.MyViewHolder>() {
+    private val itemView= mutableListOf<Movie>()
+    class MyViewHolder(itemView:View):RecyclerView.ViewHolder(itemView){
+
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
+        val layoutInflater=LayoutInflater.from(parent.context)
+        val view=layoutInflater.inflate(R.layout.item_grid,parent,false)
+        return MyViewHolder(view)
+    }
+
+    override fun getItemCount(): Int {
+        return itemView.size
+    }
+
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+        val item=itemView.get(position)
+        holder.itemView.tvTitle.text=item.title
+        holder.itemView.ivCover.setImageResource(item.image)
+        holder.itemView.tvYear.text=item.year.toString()
+    }
+    fun setData(newData:List<Movie>){
+        itemView.clear()
+        itemView.addAll(newData)
+        notifyDataSetChanged()
+    }
+}
